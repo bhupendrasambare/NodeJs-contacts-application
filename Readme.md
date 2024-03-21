@@ -72,8 +72,8 @@ This is a Node.js and Express application for managing contacts with user authen
 
 Replace `{{token}}` with the actual token obtained after login.
 
+### Create a new contact
 ```bash
-# Create a new contact
 curl --location 'localhost:6000/api/contacts' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{token}}' \
@@ -83,12 +83,14 @@ curl --location 'localhost:6000/api/contacts' \
     "email": "john.doe@example.com",
     "phone": "1234567890"
 }'
-
-# Get a contact by ID
+```
+### Get a contact by ID
+```bash
 curl --location 'localhost:6000/api/contacts/65fc9483396f24e092a87028' \
 --header 'Authorization: Bearer {{token}}'
-
-# Update a contact by ID
+```
+### Update a contact by ID
+```bash
 curl --location --request PUT 'localhost:6000/api/contacts/65fc9483396f24e092a87028' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {{token}}' \
@@ -98,12 +100,14 @@ curl --location --request PUT 'localhost:6000/api/contacts/65fc9483396f24e092a87
     "email": "jane.doe@example.com",
     "phone": "1234567890"
 }'
-
-# Delete a contact by ID
+```
+### Delete a contact by ID
+```bash
 curl --location --request DELETE 'localhost:6000/api/contacts/65f63193ea4beca9afd9a8c0' \
 --header 'Authorization: Bearer {{token}}'
-
-# Register a new user
+```
+### Register a new user
+```bash
 curl --location 'localhost:6000/api/users/register' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -114,20 +118,23 @@ curl --location 'localhost:6000/api/users/register' \
     "lastName": "Doe",
     "phone": "1234567890"
 }'
-
-# Login user
+```
+### Login user
+```bash
 curl --location 'localhost:6000/api/users/login' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "email": "user@example.com",
     "password": "password"
 }'
-
-# Get all users
+```
+### Get all users
+```bash
 curl --location 'localhost:6000/api/users/get' \
 --header 'Authorization: Bearer {{token}}'
-
-# Get user profile
+```
+### Get user profile
+```bash
 curl --location 'localhost:6000/api/users/profile' \
 --header 'Authorization: Bearer {{token}}'
 ```
