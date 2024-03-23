@@ -2,7 +2,7 @@
 
 This is a Node.js and Express application for managing contacts with user authentication. Each user can register, login, view their profile, and perform CRUD operations on their contacts.
 
-## Features
+# Features
 
 - User Registration: Users can register by providing their email and password.
 - User Login: Registered users can log in using their email and password.
@@ -10,7 +10,7 @@ This is a Node.js and Express application for managing contacts with user authen
 - User Profile: Users can view their profile information, including their email and other details.
 - Contact Management: Users can perform CRUD operations on their contacts (Create, Read, Update, Delete).
 
-## Technologies Used
+# Technologies Used
 
 - Node.js
 - Express.js
@@ -20,7 +20,7 @@ This is a Node.js and Express application for managing contacts with user authen
 - Bcrypt (Password hashing)
 - Express Validator (Input validation)
 
-## Installation
+# Installation
 
 1. Clone the repository:
 
@@ -57,7 +57,7 @@ This is a Node.js and Express application for managing contacts with user authen
 
 6. Access the application in your browser at `http://localhost:6000`.
 
-## API Endpoints
+# API Endpoints
 
 - POST /api/users/register - Register a new user.
 - POST /api/users/login - Login a user.
@@ -68,7 +68,7 @@ This is a Node.js and Express application for managing contacts with user authen
 - PUT /api/contacts/:id - Update a contact by ID.
 - DELETE /api/contacts/:id - Delete a contact by ID.
 
-## Example CURL Commands
+# Example CURL Commands
 
 Replace `{{token}}` with the actual token obtained after login.
 
@@ -84,12 +84,12 @@ curl --location 'localhost:6000/api/contacts' \
     "phone": "1234567890"
 }'
 ```
-### Get a contact by ID
+## Get a contact by ID
 ```bash
 curl --location 'localhost:6000/api/contacts/65fc9483396f24e092a87028' \
 --header 'Authorization: Bearer {{token}}'
 ```
-### Update a contact by ID
+## Update a contact by ID
 ```bash
 curl --location --request PUT 'localhost:6000/api/contacts/65fc9483396f24e092a87028' \
 --header 'Content-Type: application/json' \
@@ -101,12 +101,12 @@ curl --location --request PUT 'localhost:6000/api/contacts/65fc9483396f24e092a87
     "phone": "1234567890"
 }'
 ```
-### Delete a contact by ID
+## Delete a contact by ID
 ```bash
 curl --location --request DELETE 'localhost:6000/api/contacts/65f63193ea4beca9afd9a8c0' \
 --header 'Authorization: Bearer {{token}}'
 ```
-### Register a new user
+## Register a new user
 ```bash
 curl --location 'localhost:6000/api/users/register' \
 --header 'Content-Type: application/json' \
@@ -119,7 +119,7 @@ curl --location 'localhost:6000/api/users/register' \
     "phone": "1234567890"
 }'
 ```
-### Login user
+## Login user
 ```bash
 curl --location 'localhost:6000/api/users/login' \
 --header 'Content-Type: application/json' \
@@ -128,17 +128,17 @@ curl --location 'localhost:6000/api/users/login' \
     "password": "password"
 }'
 ```
-### Get all users
+## Get all users
 ```bash
 curl --location 'localhost:6000/api/users/get' \
 --header 'Authorization: Bearer {{token}}'
 ```
-### Get user profile
+## Get user profile
 ```bash
 curl --location 'localhost:6000/api/users/profile' \
 --header 'Authorization: Bearer {{token}}'
 ```
 
-## Author
+# Author
 
 [Bhupendra sambare](https://github.com/bhupendrasambare)
